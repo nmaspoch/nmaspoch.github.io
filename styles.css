@@ -26,14 +26,14 @@ h3 {
     font-weight: 600;
 }
 
-h1 {
+/* h1 {
     font-size: 1.5rem;
     line-height: 2.5rem;
 }
 
 h2 {
     font-size: 1rem;
-}
+} */
 
 img,
 picture,
@@ -44,7 +44,6 @@ video {
 }
 
 .container {
-    padding: 0;
     margin: 0 auto;
     width: 80%;
 }
@@ -114,7 +113,6 @@ main {
 }
 
 .fancy-link:hover {
-    border: solid white;
     background-color: #FB6900;
     color: white;
 }
@@ -210,23 +208,17 @@ section h1 {
 }
 
 .project-info {
+    margin: 0;
     opacity: 0;
     position: absolute;
     text-align: center;
-    padding: 1em;
+    padding: 0.5rem 1rem;
     width: 100%;
-    color: white;
-    font-size: small;
-
+    color: white;    
     display: flex;
     flex-flow: column;
-
     align-items: center;
-}
-
-.project-info>a>img {
-    width: 50px;
-    align-self: center;
+    font-size: 0.75em;
 }
 
 .project:hover .project-info {
