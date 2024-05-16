@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <img id="hamburger" src="menu.svg" onclick="toggleMenu()">
+        <img id="hamburger" src="images/menu.svg" onclick="toggleMenu()">
         <nav id="nav">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -27,9 +27,9 @@
     </header>
     <div class="container">
         <main>
-            <img id="avatar" src="nick.png" alt="Image of Nicholas Maspoch">
+            <img id="avatar" src="images/nick.png" alt="Image of Nicholas Maspoch">
             <div id="info">
-                <h1><span style="font-weight: lighter;">My name is </span>Nicholas
+                <h1 style="font-size: 2rem;"><span style="font-weight: 300;">My name is </span>Nicholas
                     Maspoch</h1>
                 <p>I am an aspiring computer science student interested in Java, web design, and AI.</p>
                 <div class="fancy-link"><a href="Nicholas-Maspoch-Resume.pdf" target="_blank">Download Resume</a></div>
@@ -57,8 +57,8 @@
                     </svg>
                 </a>
                 <a href="https://www.instagram.com/nicholas_maspoch/">
-                    <?xml version="1.0"?><svg class="site-logo"fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
-                        width="50px" height="50px">
+                    <?xml version="1.0"?><svg class="site-logo" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 50 50" width="50px" height="50px">
                         <path
                             d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z" />
                     </svg>
@@ -67,26 +67,26 @@
         </main>
         <section>
             <h1 id="skills">Skills</h1>
-            <div class="articles">
-                <article>
-                    <img class="article-icon" src="skills/code.svg">
-                    <div class="article-info">
+            <div id="skills-section">
+                <article class="skill">
+                    <img class="skill-icon" src="images/skills/code.svg">
+                    <div class="skill-info">
                         <h2>Programming languages</h2>
                         <p>I have intermediate knowledge of Python, Java, and C#.</p>
                     </div>
                 </article>
-                <article>
-                    <img class="article-icon" src="skills/frontend.svg">
-                    <div class="article-info">
+                <article class="skill">
+                    <img class="skill-icon" src="images/skills/frontend.svg">
+                    <div class="skill-info">
                         <h2>Frontend development</h2>
                         <p>This website, completely designed by myself from scratch, was built using HTML, CSS, and
                             JavasScript
                     </div>
                     </p>
                 </article>
-                <article>
-                    <img class="article-icon" src="skills/game.svg">
-                    <div class="article-info">
+                <article class="skill">
+                    <img class="skill-icon" src="images/skills/game.svg">
+                    <div class="skill-info">
                         <h2>Game development</h2>
                         <p>I have worked on several personal projects using the Unity game engine and I am currently
                             learning to
@@ -94,9 +94,9 @@
                             the Godot game engine.</p>
                     </div>
                 </article>
-                <article>
-                    <img class="article-icon" src="skills/team.svg">
-                    <div class="article-info">
+                <article class="skill">
+                    <img class="skill-icon" src="images/skills/team.svg">
+                    <div class="skill-info">
                         <h2>Team player</h2>
                         <p>Throughout high school, I was a member of Makeshift Robotics 4039, one of the top FIRST teams
                             in
@@ -104,22 +104,39 @@
                             During provincial and world championships, I acted as scout lead.</p>
                     </div>
                 </article>
+            </div>
         </section>
-        <!-- <section>
+        <section>
             <h1 id="projects">Projects</h1>
-            <div class="articles">
-                <article>
-                    <img class="article-icon" src="projects/algorithms.jpg">
-                    <div class="article-info">
-                        <h2>Algorithms</h2>
-                        <p>Using Algorithms 4th Edition and The Algorithm Design Manual, I created data structures such as a
-                            binary
-                            search tree, stack, queue, and red-black tree to further my knowledge of Java, object-oriented
-                            programming, and data structures.</p>
+            <div id="projects-section">
+                <article class="project">
+                    <div class="project-overlay"></div>
+                    <img src="images/projects/algorithms.svg">
+                    <div class="project-info">
+                        <h1>Algorithms</h1>
+                        <p>I created data structures such
+                            as a binary search tree, stack, queue, and red-black tree to further my knowledge of Java,
+                            object-oriented programming, and data structures.</p>
+                    </div>
+                </article>
+                <article class="project">
+                    <div class="project-overlay"></div>
+                    <img src="images/projects/machine-learning.svg">
+                    <div class="project-info">
+                        <h1>Machine Learning</h1>
+                        <p>Coming soon</p>
+                    </div>
+                </article>
+                <article class="project">
+                    <div class="project-overlay"></div>
+                    <img src="images/projects/math.png">
+                    <div class="project-info">
+                        <h1>Godot Math Game</h1>
+                        <p>Coming Soon</p>
                     </div>
                 </article>
             </div>
-        </section> -->
+        </section>
         <footer>
             <p>Icons by Jemis Mali</p>
         </footer>
