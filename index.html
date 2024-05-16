@@ -1,140 +1,151 @@
-<!DOCTYPE html>
 <html>
 
 <head>
     <title>Nicholas Maspoch</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="stylesheet.css" rel="stylesheet">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <nav class="nav row">
-                <a href="#"><img class="logo desktop-logo" src="images/logo.svg"></a>
-                <a href="#"><img class="logo mobile-logo" src="images/braces.svg"></a>
-                <ul class="nav-list column">
-                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#books" class="nav-link">Books</a></li>
-                    <!-- <li class="nav-item"><a href="#" class="nav-link">Blog</a></li> -->
-                    <li class="nav-item button nav-item--button"><a href="mailto:nmaspoch@hotmail.com"
-                            class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <img id="hamburger" src="menu.svg" onclick="toggleMenu()">
+        <nav id="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li class="fancy-link"><a href="mailto:">Contact</a></li>
+                <!-- <li><a href="#">Contact</a></li> -->
+            </ul>
+        </nav>
     </header>
-
-    <main>
-        <div class="container row">
-            <div class="column"><img src="images/nick.png" alt="Nicholas Maspoch" class="main-img"></div>
-            <div class="main-section column">
-                <h1 class="main-header">
-                    <span style="font-weight: normal;">My name is Maspoch, </span>
-                    <span style="font-weight: bolder;">Nicholas Maspoch</span>
-                </h1>
-                <p>I am an aspiring computer science student interested in Java, web design, and AI</p>
-                <div class="button"><a href="Nicholas_Maspoch_Resume.pdf" target="_blank" class="nav-link">Download
-                        resume</a></div>
-                <div class="badges">
-                    <div class="badge">python</div>
-                    <div class="badge">java</div>
-                    <div class="badge">c#</div>
-                    <div class="badge">html/css</div>
-                    <div class="badge">javascript</div>
-                </div>
+    <div class="container">
+        <main>
+            <img id="avatar" src="nick.png" alt="Image of Nicholas Maspoch">
+            <div id="info">
+                <h1><span style="font-weight: lighter;">My name is </span>Nicholas
+                    Maspoch</h1>
+                <p>I am an aspiring computer science student interested in Java, web design, and AI.</p>
+                <div class="fancy-link"><a href="Nicholas-Maspoch-Resume.pdf" target="_blank">Download Resume</a></div>
+                <aside>
+                    <div class="badge" style="background-color: #FF8E3D;"><a>Python</a></div>
+                    <div class="badge" style="background-color: #FB6900;"><a>Java</a></div>
+                    <div class="badge" style="background-color: #241F21; color: white;"><a>C#</a></div>
+                    <div class="badge" style="background-color: #E1E1E1;"><a>HTML/CSS</a></div>
+                    <div class="badge" style="background-color: #F0E4DC;"><a>JavaScript</a></div>
+                </aside>
             </div>
-        </div>
-    </main>
-
-    <section class="container">
-        <h1 id="skills">Skills</h1>
-        <div class="row">
-            <div class="skill-column">
-                <h2>Programming languages</h2>
-                <p>I have intermediate knowledge of
-                    Python, Java, and C#. I am also currently studying Javascript.</p>
-            </div>
-            <div class="skill-column">
-                <h2>CSS and HTML</h2>
-                <p>This website completely built by me while learning CSS and HTML.</p>
-            </div>
-            <div class="skill-column">
-                <h2>Unity game development</h2>
-                <p>I have worked on several personal projects using the Unity game engine to develop 2D and 3D games.
-                </p>
-            </div>
-
-            <div class="skill-column">
-                <h2>Team player</h2>
-                <p>Throughout high school, I was a member of <a href="https://4039.ca">Makeshift Robotics 4039</a>, one
-                    of the top FIRST teams in Ontario. During provincial and world championships, I acted as scout lead.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h1 id="projects">Projects</h1>
-        <div class="row">
-            <div class="column">
-                <img class="project-img" src="images/face-detection.png" alt="Face detection">
-                <h2>Face Recognition</h2>
-                <p class="project-description">Written using Python, my face recognition app detects faces through a
-                    camera connected to my Raspberry Pi 3.</p>
-            </div>
-            <div class="column">
-                <img class="project-img" src="images/game.png" alt="Database">
-                <h2>First Person Shooter</h2>
-                <p class="project-description">Influenced by my love for spy and action films, I created a first person
-                    shooter using the Unity Engine that has features such as a state machine for enemy AI and a grapple
-                    hook that allows the player to quickly traverse the map.</p>
-            </div>
-            <div class="column">
-                <img class="project-img" src="images/authentication.png" alt="Authentication">
-                <h2>Algorithms</h2>
-                <p class="project-description">Using Algorithms 4th Edition and The Algorithm Design Manual, I created
-                    data structures such as a binary search tree, stack, queue, and red-black tree to further my
-                    knowledge of Java, object-oriented programming, and data structures.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h1 id="books">Books</h1>
-        <div class="row">
-            <div class="column">
-                <a href="https://www.amazon.ca/Algorithm-Design-Manual-Steven-Skiena/dp/1849967202" target="_blank">
-                    <img class="book-img" src="images/books/skiena.jpg" alt="The Algorithm Design Manual">
+            <sidebar>
+                <a href="https://github.com/nmaspoch/" target="_blank">
+                    <?xml version="1.0"?><svg class="site-logo" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 50 50" width="50px" height="50px">
+                        <path
+                            d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z" />
+                    </svg>
                 </a>
-            </div>
-            <div class="column">
-                <a href="https://www.amazon.ca/Algorithms-4th-Robert-Sedgewick/dp/032157351X?asin=032157351X&revisionId=&format=4&depth=1"
-                    target="_blank">
-                    <img class="book-img" src="images/books/algorithms.jpg" alt="Algorithms 4th Edition">
+                <a href="https://www.linkedin.com/in/nicholas-maspoch-99b448229/" target="_blank">
+                    <?xml version="1.0"?><svg class="site-logo" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 50 50" width="50px" height="50px">
+                        <path
+                            d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z" />
+                    </svg>
                 </a>
-            </div>
-            <div class="column">
-                <a href="https://www.amazon.ca/Learning-Developing-Games-Unity-coding/dp/1837636877?asin=1837636877&revisionId=&format=4&depth=1"
-                    target="_blank">
-                    <img class="book-img" src="images/books/unity.jpg"
-                        alt="Learning C# by Developing Games with Unity 7th Edition">
+                <a href="https://www.instagram.com/nicholas_maspoch/">
+                    <?xml version="1.0"?><svg class="site-logo"fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+                        width="50px" height="50px">
+                        <path
+                            d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z" />
+                    </svg>
                 </a>
+            </sidebar>
+        </main>
+        <section>
+            <h1 id="skills">Skills</h1>
+            <div class="articles">
+                <article>
+                    <img class="article-icon" src="skills/code.svg">
+                    <div class="article-info">
+                        <h2>Programming languages</h2>
+                        <p>I have intermediate knowledge of Python, Java, and C#.</p>
+                    </div>
+                </article>
+                <article>
+                    <img class="article-icon" src="skills/frontend.svg">
+                    <div class="article-info">
+                        <h2>Frontend development</h2>
+                        <p>This website, completely designed by myself from scratch, was built using HTML, CSS, and
+                            JavasScript
+                    </div>
+                    </p>
+                </article>
+                <article>
+                    <img class="article-icon" src="skills/game.svg">
+                    <div class="article-info">
+                        <h2>Game development</h2>
+                        <p>I have worked on several personal projects using the Unity game engine and I am currently
+                            learning to
+                            use
+                            the Godot game engine.</p>
+                    </div>
+                </article>
+                <article>
+                    <img class="article-icon" src="skills/team.svg">
+                    <div class="article-info">
+                        <h2>Team player</h2>
+                        <p>Throughout high school, I was a member of Makeshift Robotics 4039, one of the top FIRST teams
+                            in
+                            Ontario.
+                            During provincial and world championships, I acted as scout lead.</p>
+                    </div>
+                </article>
+        </section>
+        <!-- <section>
+            <h1 id="projects">Projects</h1>
+            <div class="articles">
+                <article>
+                    <img class="article-icon" src="projects/algorithms.jpg">
+                    <div class="article-info">
+                        <h2>Algorithms</h2>
+                        <p>Using Algorithms 4th Edition and The Algorithm Design Manual, I created data structures such as a
+                            binary
+                            search tree, stack, queue, and red-black tree to further my knowledge of Java, object-oriented
+                            programming, and data structures.</p>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <a href="https://www.linkedin.com/in/nicholas-maspoch-99b448229/" target="_blank"><img class="social-media-link"
-                src="images/linkedin.svg" alt="Linkedin logo"></a>
-        <a href="https://github.com/nmaspoch" target="_blank"><img class="social-media-link" src="images/github.svg"
-                alt="Github logo"></a>
-    </footer>
+        </section> -->
+        <footer>
+            <p>Icons by Jemis Mali</p>
+        </footer>
+    </div>
 </body>
 
 </html>
+
+<script>
+    function toggleMenu() {
+        var m = window.matchMedia("(min-width: 768px)");
+        m.addListener(checkMedia)
+        var nav = document.getElementById("nav")
+
+        function checkMedia(media) {
+            if (media.matches) {
+                nav.style.display = "block"
+            }
+            else {
+                nav.style.display = "none";
+            }
+        }
+
+        if (nav.style.display === "block")
+            nav.style.display = "none";
+        else
+            nav.style.display = "block"
+    }
+</script>
