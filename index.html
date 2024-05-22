@@ -13,7 +13,11 @@
 
 <body>
     <header>
-        <img id="hamburger" src="images/menu.svg" onclick="toggleMenu()">
+        <div id="hamburger" onclick="toggleMenu(this)">
+            <div id="bar1"></div>
+            <div id="bar2"></div>
+            <div id="bar3"></div>
+        </div>
         <nav id="nav">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -21,7 +25,6 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#">Blog</a></li>
                 <li class="fancy-link"><a href="mailto:">Contact</a></li>
-                <!-- <li><a href="#">Contact</a></li> -->
             </ul>
         </nav>
     </header>
@@ -114,8 +117,6 @@
                     <img src="images/projects/algorithms.svg">
                     <div class="project-info">
                         <h1>Algorithms</h1>
-                        <!-- <p>Project to further my knowledge of Java,
-                            object-oriented programming, and data structures.</p> -->
                     </div>
                 </article>
                 <article class="project">
@@ -124,7 +125,6 @@
                     <div class="project-info">
                         <h1>Machine Learning</h1>
                         <h2>&#40Coming Soon&#41</h2>
-                        <!-- <p>Coming soon</p> -->
                     </div>
                 </article>
                 <article class="project">
@@ -133,7 +133,6 @@
                     <div class="project-info">
                         <h1>Godot Math Game</h1>
                         <h2>&#40Coming Soon&#41</h2>
-                        <!-- <p>Coming Soon</p> -->
                     </div>
                 </article>
             </div>
@@ -147,23 +146,25 @@
 </html>
 
 <script>
-    function toggleMenu() {
-        var m = window.matchMedia("(min-width: 768px)");
-        m.addListener(checkMedia)
-        var nav = document.getElementById("nav")
+    // function toggleMenu() {
+    //     var nav = document.getElementById("nav")
 
-        function checkMedia(media) {
-            if (media.matches) {
-                nav.style.display = "block"
-            }
-            else {
-                nav.style.display = "none";
-            }
+    //     if (nav.style.display === "block")
+    //         nav.style.display = "none";
+    //     else
+    //         nav.style.display = "block"
+    // }
+    var menu = document.getElementById("menu");
+    var nav = document.getElementById("nav");
+
+    function toggleMenu(x) {
+        x.classList.toggle("active");
+
+        if (nav.style.maxHeight) {
+            nav.style.maxHeight = null;
         }
-
-        if (nav.style.display === "block")
-            nav.style.display = "none";
-        else
-            nav.style.display = "block"
+        else {
+            nav.style.maxHeight = nav.scrollHeight + "px";
+        }
     }
 </script>
